@@ -1,0 +1,16 @@
+<div class="container">
+  <button class="btn btn-primary" (click)="toggleDetails()">Display Details</button>
+  <p *ngIf="showDetails">{{details}}</p>
+  <div class="row">
+    <div class="col-xs-12">
+      <ol>
+        <li 
+          *ngFor="let clic of buttonClicks; let i = index"
+          [ngClass]="{'bg-primary': i > 4}"
+          [ngStyle]="{color: i > 4 ? 'white' : ''}"
+        >{{clic}}</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
